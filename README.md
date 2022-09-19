@@ -12,7 +12,7 @@ All models are available in [Baidu Pan](https://pan.baidu.com/s/1NqOcAbhMsME9qs4
 
 ## screenshot
 ![](screenshot.jpg)  
-![](screenshot_android.jpg)
+![](screenshot_android.gif)
 
 ## reference  
 https://github.com/Tencent/ncnn  
