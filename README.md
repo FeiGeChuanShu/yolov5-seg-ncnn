@@ -1,19 +1,10 @@
 # yolov5-seg-ncnn
 
-```
-mkdir build
-cd build 
-cmake ..
-make 
-./yolov5_seg_ncnn ../imgs/horses.jpg
-```
+### 1.yolov5-seg demo  
+### 2.yolov5-hand-seg Android demo 
 
-All models are available in [Baidu Pan](https://pan.baidu.com/s/1NqOcAbhMsME9qs4zVob0Fw) (b793)  
 
 ## screenshot
 ![](screenshot.jpg)  
 ![](screenshot_android.gif)
 
-## reference  
-https://github.com/Tencent/ncnn  
-https://github.com/ultralytics/yolov5  

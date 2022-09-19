@@ -1,0 +1,183 @@
+7767517
+181 206
+Input                    images                   0 1 images
+Convolution              Conv_0                   1 1 images 128 0=32 1=6 3=2 4=2 5=1 6=3456
+Swish                    Mul_2                    1 1 128 130
+Convolution              Conv_3                   1 1 130 131 0=64 1=3 3=2 4=1 5=1 6=18432
+Swish                    Mul_5                    1 1 131 133
+Split                    splitncnn_0              1 2 133 133_splitncnn_0 133_splitncnn_1
+Convolution              Conv_6                   1 1 133_splitncnn_1 134 0=32 1=1 5=1 6=2048
+Swish                    Mul_8                    1 1 134 136
+Split                    splitncnn_1              1 2 136 136_splitncnn_0 136_splitncnn_1
+Convolution              Conv_9                   1 1 136_splitncnn_1 137 0=32 1=1 5=1 6=1024
+Swish                    Mul_11                   1 1 137 139
+Convolution              Conv_12                  1 1 139 140 0=32 1=3 4=1 5=1 6=9216
+Swish                    Mul_14                   1 1 140 142
+BinaryOp                 Add_15                   2 1 136_splitncnn_0 142 143
+Convolution              Conv_16                  1 1 133_splitncnn_0 144 0=32 1=1 5=1 6=2048
+Swish                    Mul_18                   1 1 144 146
+Concat                   Concat_19                2 1 143 146 147
+Convolution              Conv_20                  1 1 147 148 0=64 1=1 5=1 6=4096
+Swish                    Mul_22                   1 1 148 150
+Convolution              Conv_23                  1 1 150 151 0=128 1=3 3=2 4=1 5=1 6=73728
+Swish                    Mul_25                   1 1 151 153
+Split                    splitncnn_2              1 2 153 153_splitncnn_0 153_splitncnn_1
+Convolution              Conv_26                  1 1 153_splitncnn_1 154 0=64 1=1 5=1 6=8192
+Swish                    Mul_28                   1 1 154 156
+Split                    splitncnn_3              1 2 156 156_splitncnn_0 156_splitncnn_1
+Convolution              Conv_29                  1 1 156_splitncnn_1 157 0=64 1=1 5=1 6=4096
+Swish                    Mul_31                   1 1 157 159
+Convolution              Conv_32                  1 1 159 160 0=64 1=3 4=1 5=1 6=36864
+Swish                    Mul_34                   1 1 160 162
+BinaryOp                 Add_35                   2 1 156_splitncnn_0 162 163
+Split                    splitncnn_4              1 2 163 163_splitncnn_0 163_splitncnn_1
+Convolution              Conv_36                  1 1 163_splitncnn_1 164 0=64 1=1 5=1 6=4096
+Swish                    Mul_38                   1 1 164 166
+Convolution              Conv_39                  1 1 166 167 0=64 1=3 4=1 5=1 6=36864
+Swish                    Mul_41                   1 1 167 169
+BinaryOp                 Add_42                   2 1 163_splitncnn_0 169 170
+Convolution              Conv_43                  1 1 153_splitncnn_0 171 0=64 1=1 5=1 6=8192
+Swish                    Mul_45                   1 1 171 173
+Concat                   Concat_46                2 1 170 173 174
+Convolution              Conv_47                  1 1 174 175 0=128 1=1 5=1 6=16384
+Swish                    Mul_49                   1 1 175 177
+Split                    splitncnn_5              1 2 177 177_splitncnn_0 177_splitncnn_1
+Convolution              Conv_50                  1 1 177_splitncnn_1 178 0=256 1=3 3=2 4=1 5=1 6=294912
+Swish                    Mul_52                   1 1 178 180
+Split                    splitncnn_6              1 2 180 180_splitncnn_0 180_splitncnn_1
+Convolution              Conv_53                  1 1 180_splitncnn_1 181 0=128 1=1 5=1 6=32768
+Swish                    Mul_55                   1 1 181 183
+Split                    splitncnn_7              1 2 183 183_splitncnn_0 183_splitncnn_1
+Convolution              Conv_56                  1 1 183_splitncnn_1 184 0=128 1=1 5=1 6=16384
+Swish                    Mul_58                   1 1 184 186
+Convolution              Conv_59                  1 1 186 187 0=128 1=3 4=1 5=1 6=147456
+Swish                    Mul_61                   1 1 187 189
+BinaryOp                 Add_62                   2 1 183_splitncnn_0 189 190
+Split                    splitncnn_8              1 2 190 190_splitncnn_0 190_splitncnn_1
+Convolution              Conv_63                  1 1 190_splitncnn_1 191 0=128 1=1 5=1 6=16384
+Swish                    Mul_65                   1 1 191 193
+Convolution              Conv_66                  1 1 193 194 0=128 1=3 4=1 5=1 6=147456
+Swish                    Mul_68                   1 1 194 196
+BinaryOp                 Add_69                   2 1 190_splitncnn_0 196 197
+Split                    splitncnn_9              1 2 197 197_splitncnn_0 197_splitncnn_1
+Convolution              Conv_70                  1 1 197_splitncnn_1 198 0=128 1=1 5=1 6=16384
+Swish                    Mul_72                   1 1 198 200
+Convolution              Conv_73                  1 1 200 201 0=128 1=3 4=1 5=1 6=147456
+Swish                    Mul_75                   1 1 201 203
+BinaryOp                 Add_76                   2 1 197_splitncnn_0 203 204
+Convolution              Conv_77                  1 1 180_splitncnn_0 205 0=128 1=1 5=1 6=32768
+Swish                    Mul_79                   1 1 205 207
+Concat                   Concat_80                2 1 204 207 208
+Convolution              Conv_81                  1 1 208 209 0=256 1=1 5=1 6=65536
+Swish                    Mul_83                   1 1 209 211
+Split                    splitncnn_10             1 2 211 211_splitncnn_0 211_splitncnn_1
+Convolution              Conv_84                  1 1 211_splitncnn_1 212 0=512 1=3 3=2 4=1 5=1 6=1179648
+Swish                    Mul_86                   1 1 212 214
+Split                    splitncnn_11             1 2 214 214_splitncnn_0 214_splitncnn_1
+Convolution              Conv_87                  1 1 214_splitncnn_1 215 0=256 1=1 5=1 6=131072
+Swish                    Mul_89                   1 1 215 217
+Split                    splitncnn_12             1 2 217 217_splitncnn_0 217_splitncnn_1
+Convolution              Conv_90                  1 1 217_splitncnn_1 218 0=256 1=1 5=1 6=65536
+Swish                    Mul_92                   1 1 218 220
+Convolution              Conv_93                  1 1 220 221 0=256 1=3 4=1 5=1 6=589824
+Swish                    Mul_95                   1 1 221 223
+BinaryOp                 Add_96                   2 1 217_splitncnn_0 223 224
+Convolution              Conv_97                  1 1 214_splitncnn_0 225 0=256 1=1 5=1 6=131072
+Swish                    Mul_99                   1 1 225 227
+Concat                   Concat_100               2 1 224 227 228
+Convolution              Conv_101                 1 1 228 229 0=512 1=1 5=1 6=262144
+Swish                    Mul_103                  1 1 229 231
+Convolution              Conv_104                 1 1 231 232 0=256 1=1 5=1 6=131072
+Swish                    Mul_106                  1 1 232 234
+Split                    splitncnn_13             1 2 234 234_splitncnn_0 234_splitncnn_1
+Pooling                  MaxPool_107              1 1 234_splitncnn_1 235 1=5 3=2 5=1
+Split                    splitncnn_14             1 2 235 235_splitncnn_0 235_splitncnn_1
+Pooling                  MaxPool_108              1 1 235_splitncnn_1 236 1=5 3=2 5=1
+Split                    splitncnn_15             1 2 236 236_splitncnn_0 236_splitncnn_1
+Pooling                  MaxPool_109              1 1 236_splitncnn_1 237 1=5 3=2 5=1
+Concat                   Concat_110               4 1 234_splitncnn_0 235_splitncnn_0 236_splitncnn_0 237 238
+Convolution              Conv_111                 1 1 238 239 0=512 1=1 5=1 6=524288
+Swish                    Mul_113                  1 1 239 241
+Convolution              Conv_114                 1 1 241 242 0=256 1=1 5=1 6=131072
+Swish                    Mul_116                  1 1 242 244
+Split                    splitncnn_16             1 2 244 244_splitncnn_0 244_splitncnn_1
+Interp                   Resize_118               1 1 244_splitncnn_1 249 0=1 1=2.000000e+00 2=2.000000e+00
+Concat                   Concat_119               2 1 249 211_splitncnn_0 250
+Split                    splitncnn_17             1 2 250 250_splitncnn_0 250_splitncnn_1
+Convolution              Conv_120                 1 1 250_splitncnn_1 251 0=128 1=1 5=1 6=65536
+Swish                    Mul_122                  1 1 251 253
+Convolution              Conv_123                 1 1 253 254 0=128 1=1 5=1 6=16384
+Swish                    Mul_125                  1 1 254 256
+Convolution              Conv_126                 1 1 256 257 0=128 1=3 4=1 5=1 6=147456
+Swish                    Mul_128                  1 1 257 259
+Convolution              Conv_129                 1 1 250_splitncnn_0 260 0=128 1=1 5=1 6=65536
+Swish                    Mul_131                  1 1 260 262
+Concat                   Concat_132               2 1 259 262 263
+Convolution              Conv_133                 1 1 263 264 0=256 1=1 5=1 6=65536
+Swish                    Mul_135                  1 1 264 266
+Convolution              Conv_136                 1 1 266 267 0=128 1=1 5=1 6=32768
+Swish                    Mul_138                  1 1 267 269
+Split                    splitncnn_18             1 2 269 269_splitncnn_0 269_splitncnn_1
+Interp                   Resize_140               1 1 269_splitncnn_1 274 0=1 1=2.000000e+00 2=2.000000e+00
+Concat                   Concat_141               2 1 274 177_splitncnn_0 275
+Split                    splitncnn_19             1 2 275 275_splitncnn_0 275_splitncnn_1
+Convolution              Conv_142                 1 1 275_splitncnn_1 276 0=64 1=1 5=1 6=16384
+Swish                    Mul_144                  1 1 276 278
+Convolution              Conv_145                 1 1 278 279 0=64 1=1 5=1 6=4096
+Swish                    Mul_147                  1 1 279 281
+Convolution              Conv_148                 1 1 281 282 0=64 1=3 4=1 5=1 6=36864
+Swish                    Mul_150                  1 1 282 284
+Convolution              Conv_151                 1 1 275_splitncnn_0 285 0=64 1=1 5=1 6=16384
+Swish                    Mul_153                  1 1 285 287
+Concat                   Concat_154               2 1 284 287 288
+Convolution              Conv_155                 1 1 288 289 0=128 1=1 5=1 6=16384
+Swish                    Mul_157                  1 1 289 291
+Split                    splitncnn_20             1 3 291 291_splitncnn_0 291_splitncnn_1 291_splitncnn_2
+Convolution              Conv_158                 1 1 291_splitncnn_2 292 0=128 1=3 3=2 4=1 5=1 6=147456
+Swish                    Mul_160                  1 1 292 294
+Concat                   Concat_161               2 1 294 269_splitncnn_0 295
+Split                    splitncnn_21             1 2 295 295_splitncnn_0 295_splitncnn_1
+Convolution              Conv_162                 1 1 295_splitncnn_1 296 0=128 1=1 5=1 6=32768
+Swish                    Mul_164                  1 1 296 298
+Convolution              Conv_165                 1 1 298 299 0=128 1=1 5=1 6=16384
+Swish                    Mul_167                  1 1 299 301
+Convolution              Conv_168                 1 1 301 302 0=128 1=3 4=1 5=1 6=147456
+Swish                    Mul_170                  1 1 302 304
+Convolution              Conv_171                 1 1 295_splitncnn_0 305 0=128 1=1 5=1 6=32768
+Swish                    Mul_173                  1 1 305 307
+Concat                   Concat_174               2 1 304 307 308
+Convolution              Conv_175                 1 1 308 309 0=256 1=1 5=1 6=65536
+Swish                    Mul_177                  1 1 309 311
+Split                    splitncnn_22             1 2 311 311_splitncnn_0 311_splitncnn_1
+Convolution              Conv_178                 1 1 311_splitncnn_1 312 0=256 1=3 3=2 4=1 5=1 6=589824
+Swish                    Mul_180                  1 1 312 314
+Concat                   Concat_181               2 1 314 244_splitncnn_0 315
+Split                    splitncnn_23             1 2 315 315_splitncnn_0 315_splitncnn_1
+Convolution              Conv_182                 1 1 315_splitncnn_1 316 0=256 1=1 5=1 6=131072
+Swish                    Mul_184                  1 1 316 318
+Convolution              Conv_185                 1 1 318 319 0=256 1=1 5=1 6=65536
+Swish                    Mul_187                  1 1 319 321
+Convolution              Conv_188                 1 1 321 322 0=256 1=3 4=1 5=1 6=589824
+Swish                    Mul_190                  1 1 322 324
+Convolution              Conv_191                 1 1 315_splitncnn_0 325 0=256 1=1 5=1 6=131072
+Swish                    Mul_193                  1 1 325 327
+Concat                   Concat_194               2 1 324 327 328
+Convolution              Conv_195                 1 1 328 329 0=512 1=1 5=1 6=262144
+Swish                    Mul_197                  1 1 329 331
+Convolution              Conv_198                 1 1 291_splitncnn_1 332 0=128 1=3 4=1 5=1 6=147456
+Swish                    Mul_200                  1 1 332 334
+Interp                   Resize_202               1 1 334 339 0=1 1=2.000000e+00 2=2.000000e+00
+Convolution              Conv_203                 1 1 339 340 0=128 1=3 4=1 5=1 6=147456
+Swish                    Mul_205                  1 1 340 342
+Convolution              Conv_206                 1 1 342 343 0=32 1=1 5=1 6=4096
+Swish                    Mul_208                  1 1 343 345
+Convolution              Conv_209                 1 1 291_splitncnn_0 346 0=114 1=1 5=1 6=14592
+Reshape                  Reshape_223              1 1 346 364 0=-1 1=38 2=3
+Permute                  Transpose_224            1 1 364 output 0=1
+Convolution              Conv_225                 1 1 311_splitncnn_0 366 0=114 1=1 5=1 6=29184
+Reshape                  Reshape_239              1 1 366 384 0=-1 1=38 2=3
+Permute                  Transpose_240            1 1 384 385 0=1
+Convolution              Conv_241                 1 1 331 386 0=114 1=1 5=1 6=58368
+Reshape                  Reshape_255              1 1 386 404 0=-1 1=38 2=3
+Permute                  Transpose_256            1 1 404 405 0=1
+Reshape                  Reshape_402              1 1 345 seg 0=-1 1=32
