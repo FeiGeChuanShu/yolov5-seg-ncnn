@@ -476,8 +476,7 @@ static int detect_yolov5(const cv::Mat& bgr, std::vector<Object>& objects)
 
     ncnn::Mat mask_feat = ncnn::Mat(32, count, sizeof(float));
     for (int i = 0; i < count; i++) {
-        float* mask_feat_ptr = mask_feat.row(i);
-        std::memcpy(mask_feat_ptr, proposals[picked[i]].mask_feat.data(), sizeof(float)* proposals[picked[i]].mask_feat.size());
+        std::copy(proposals[picked[i]].mask_feat.begin(), proposals[picked[i]].mask_feat.end(), mask_feat.row(i));
     }
     
     ncnn::Mat mask_pred_result;
